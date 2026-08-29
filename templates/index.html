@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Calendar</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
 
+    <div class="container">
+        <header class="app-header">
+            <h1>Study Calendar</h1>
+            <p>Seu diário visual e minimalista de estudos diários</p>
+        </header>
+
+        <div class="calendar-nav">
+            <button id="prev-btn" class="nav-btn" aria-label="Mês anterior">&larr; Anterior</button>
+            <h2 id="month-year-display"></h2>
+            <button id="next-btn" class="nav-btn" aria-label="Próximo mês">Próximo &rarr;</button>
+        </div>
+
+        <div class="calendar-wrapper">
+            <div class="weekdays-grid">
+                <div>Dom</div>
+                <div>Seg</div>
+                <div>Ter</div>
+                <div>Qua</div>
+                <div>Qui</div>
+                <div>Sex</div>
+                <div>Sáb</div>
+            </div>
+            <div id="calendar-days" class="days-grid"></div>
+        </div>
+    </div>
+
+    <div id="study-modal" class="modal hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="modal-date-display">Anotação do Dia</h3>
+                <button id="close-modal-btn" class="close-btn">&times;</button>
+            </div>
+
+            <form id="study-form">
+                <input type="hidden" id="entry-date">
+                
+                <div class="form-group">
+                    <label for="entry-topic">Tópico Estudado (Máx. 100 caracteres)</label>
+                    <input type="text" id="entry-topic" maxlength="100" placeholder="Ex: CS50 SQL Queries, Flexbox..." autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="entry-notes">Anotações & Observações (Máx. 5000 caracteres)</label>
+                    <textarea id="entry-notes" rows="4" maxlength="5000" placeholder="O que você aprendeu ou quer lembrar?"></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" id="cancel-btn" class="btn btn-secondary">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
