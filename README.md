@@ -5,7 +5,7 @@
 #### Description:
 Crononote is a clean and lightweight web-based daily study journal designed to help students track their learning progress visually. Rather than using complex dashboards, it presents a minimalist calendar grid where users can click on any day, log the topic studied, and take quick notes for future review. 
 
-This project was developed as the final project for CS50x 2026.
+This project was developed as the final project for CS50x 2026. 
 
 ### Features
 - **Anonymous Workspace Sessions**: Users are assigned an automatic UUID session on their first visit, allowing immediate personal data storage without requiring a registration or login barrier.
